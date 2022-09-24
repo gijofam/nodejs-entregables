@@ -223,6 +223,7 @@ values
  '0e7283bb-b34d-48dc-9b0c-f9d75db35b32'
 );
 
+/*desafio opcional 1*/
 insert into users_courses
 (id,user_id,course_id,percent_complete,course_review) 
 values
@@ -281,6 +282,7 @@ select * from users_courses inner join courses
 on users_courses.course_id=courses.id 
 inner join users on users_courses.user_id = users.id;
 
+/*desafio opcional 2*/
 select users.name,roles.name as rol,courses.title as curso ,courses.level,categories.name as categoria_del_curso,
 teachers.name as profesor ,users_courses.percent_complete,
 users_courses.course_review from users inner join roles on users.rol_id = roles.id 
@@ -289,3 +291,4 @@ inner join courses on users_courses.course_id = courses.id
 inner join teachers on courses.teacher_id = teachers.id 
 inner join courses_categories on courses.id = courses_categories.course_id 
 inner join categories on courses_categories.categorie_id = categories.id;
+
